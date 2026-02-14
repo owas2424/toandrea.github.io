@@ -193,24 +193,30 @@
   </div>
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script>
-    $(document).ready(function(){
-      $('.title').click(function(){
-        $('.container').addClass('open');
-      });
-      $('.close').click(function(){
-        $('.container').removeClass('open');
-      });
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  $(document).ready(function(){
+    // ✅ Make the whole heart clickable
+    $('.ico').click(function(){
+      $('.container').addClass('open');
     });
 
-    document.addEventListener('click', function() {
-      document.querySelectorAll('css-doodle').forEach(o => o.update());
+    // Keep the close button as is
+    $('.close').click(function(){
+      $('.container').removeClass('open');
     });
-    document.addEventListener('touchstart', function() {
-      document.querySelectorAll('css-doodle').forEach(o => o.update());
-    });
-  </script>
+  });
+
+  document.addEventListener('click', function() {
+    document.querySelectorAll('css-doodle').forEach(o => o.update());
+  });
+  document.addEventListener('touchstart', function() {
+    document.querySelectorAll('css-doodle').forEach(o => o.update());
+  });
+</script>
+
 </body>
 </html>
+
 
 
